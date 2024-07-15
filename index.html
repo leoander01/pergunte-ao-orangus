@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br">  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="index.css">
   <title>Orangus</title>
 </head>
 <body>
   <div class="root">
-    <form style="padding: 2em 1em;">
+    <form class="form" style="padding: 2em 1em;">
+      <div class="imagem-orango">
+        <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; border-radius: 50%; opacity: 0.9;" src="https://th.bing.com/th/id/OIG2.nBqOQH53GfAzdEdiu5rK?pid=ImgGn" 
+        alt="Orango" style="max-width: 90%" width="320" height="205">
+      </div>
       <div class="title">
-        <h1>Pergunte ao Orangus</h1>
+        <h1 class="text-title">Pergunte ao Orangus</h1>
       </div>
-      <div class="texts">
-        <input aria-disabled="false" type="option2" id="option2" class="css-1ga4kqw" value="">
-        <input aria-disabled="false" type="option1" id="option1" class="css-1ga4kqw" value="">
+      <div class="options">
+        <input aria-disabled="false" type="option1" id="option1" class="input" value="">
+        <p class="vs"> vs.</p>
+        <input aria-disabled="false" type="option2" id="option2" class="input" value="">
       </div>
-      <div class="button-guess">
-        <button aria-disabled="false" type="submit" class="css-djyw4p">Decidir</button>
+      <div class="button">
+        <button aria-disabled="false" type="submit" class="button-decide" onClick="setRandomValue(event)">Decidir</button>
+      </div>
+      <div class="content">
+        <p>
+          O Orangus decidiu: <br>
+          <strong id="option-content"></strong>
+        </p>
       </div>
     </form>
   </div>
+  <footer>
+    Feito com ❤️ por <a href="https://github.com/leoander01" target="_blank">Leo</a> e <a href="https://github.com/Teeus-Dev" target="_blank">Mateus</a>
+  </footer>
+  <script src="./script.js" type="text/javascript"></script>
 </body>
-<script src="./script.js"></script>
 </html>
